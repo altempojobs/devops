@@ -98,7 +98,7 @@ footer{text-align:center;padding:20px;font-size:13px;color:var(--txt2);border-to
 <div class="apply" id="postuler">
 <h2>Prêt·e à nous rejoindre ?</h2>
 <p class="asub">CV + quelques lignes sur ce qui t’attire dans le DevOps.</p>
-<div class="ar"><div><a href="mailto:rh@altempo.com" class="bw">Envoyer ma candidature</a><div class="am">ou à <a href="mailto:rh@altempo.com">recrutement@altempo.com</a></div></div><div class="aqr"><canvas id="qr2" width="90" height="90" style="border-radius:8px;background:#fff;padding:4px"></canvas><div class="aql">Scanner pour postuler</div></div></div>
+<div class="ar"><div><a href="mailto:rh@altempo.com" class="bw">Envoyer ma candidature</a><div class="am">ou à <a href="mailto:rh@altempo.com">rh@altempo.com</a></div></div><div class="aqr"><canvas id="qr2" width="90" height="90" style="border-radius:8px;background:#fff;padding:4px"></canvas><div class="aql">Scanner pour postuler</div></div></div>
 </div>
 <footer>&#169; 2026 Altempo &#8212; Tous droits réservés</footer>
 <script>(function(){
@@ -150,7 +150,7 @@ QR.prototype._fmt=function(t,mk){var d=(this.ec<<3)|mk,dx=d<<10;while(bd(dx)-bd(
 QR.prototype._map=function(data,mk){var inc=-1,row=this.mc-1,bi=7,by=0,mf=MF[mk];for(var col=this.mc-1;col>0;col-=2){if(col===6)col--;while(true){for(var c=0;c<2;c++){if(this.m[row][col-c]===null){var dk=by<data.length?((data[by]>>>bi)&1)===1:false;if(mf(row,col-c))dk=!dk;this.m[row][col-c]=dk;bi--;if(bi<0){by++;bi=7;}}}row+=inc;if(row<0||this.mc<=row){row-=inc;inc=-inc;break;}}}};
 QR.prototype._lp=function(){var mc=this.mc,lp=0;for(var r=0;r<mc;r++)for(var c=0;c<mc;c++){var s=0,dk=this.dark(r,c);for(var dr=-1;dr<=1;dr++)for(var dc=-1;dc<=1;dc++){if(r+dr<0||mc<=r+dr||c+dc<0||mc<=c+dc||(!dr&&!dc))continue;if(dk===this.dark(r+dr,c+dc))s++;}if(s>5)lp+=s-2;}for(var r=0;r<mc-1;r++)for(var c=0;c<mc-1;c++){var n=0;if(this.dark(r,c))n++;if(this.dark(r+1,c))n++;if(this.dark(r,c+1))n++;if(this.dark(r+1,c+1))n++;if(!n||n===4)lp+=3;}var dk=0;for(var r=0;r<mc;r++)for(var c=0;c<mc;c++)if(this.dark(r,c))dk++;lp+=Math.abs(100*dk/mc/mc-50)/5*10;return lp;};
 function drawQR(id,text,sz){var qr=new QR(4,0);qr.add(text);qr.make();var cv=document.getElementById(id);if(!cv)return;cv.width=cv.height=sz;var ctx=cv.getContext("2d"),cnt=qr.size(),cs=sz/cnt;ctx.fillStyle="#fff";ctx.fillRect(0,0,sz,sz);ctx.fillStyle="#2C2C2B";for(var r=0;r<cnt;r++)for(var c=0;c<cnt;c++)if(qr.dark(r,c))ctx.fillRect(Math.floor(c*cs),Math.floor(r*cs),Math.ceil(cs),Math.ceil(cs));}
-drawQR("qr1","mailto:recrutement@altempo.io",78);
-drawQR("qr2","mailto:recrutement@altempo.io",90);
+drawQR("qr1","mailto:rh@altempo.com",78);
+drawQR("qr2","mailto:rh@altempo.com",90);
 })();</script>
 </body></html>
